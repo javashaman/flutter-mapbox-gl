@@ -377,10 +377,11 @@ final class MapboxMapController
   private void enableSymbolManager(@NonNull Style style) {
     if (symbolManager == null) {
       symbolManager = new SymbolManager(mapView, mapboxMap, style);
-      symbolManager.setIconAllowOverlap(true);
-      symbolManager.setIconIgnorePlacement(true);
-      symbolManager.setTextAllowOverlap(true);
-      symbolManager.setTextIgnorePlacement(true);
+      //CSW: NOTE: changed to false to re-enable icon avoidance:
+      symbolManager.setIconAllowOverlap(false);
+      symbolManager.setIconIgnorePlacement(false);
+      symbolManager.setTextAllowOverlap(false);
+      symbolManager.setTextIgnorePlacement(false;
       symbolManager.addClickListener(MapboxMapController.this::onAnnotationClick);
     }
   }
