@@ -384,7 +384,7 @@ final class MapboxMapController
       symbolManager.setIconAllowOverlap(false);
       symbolManager.setIconIgnorePlacement(false);
       symbolManager.setTextAllowOverlap(false);
-      symbolManager.setTextIgnorePlacement(false;
+      symbolManager.setTextIgnorePlacement(false);
       symbolManager.addClickListener(MapboxMapController.this::onAnnotationClick);
     }
   }
