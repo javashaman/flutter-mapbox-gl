@@ -319,7 +319,10 @@ final class MapboxMapController
       }
       
       if (myLocationEnabled) {
-        enableLocationComponent(style);
+        // enableLocationComponent(style);
+        //CSW: NOTE: fix for location callback to work, as per this thread:
+        //https://github.com/tobrun/flutter-mapbox-gl/issues/444
+        updateMyLocationEnabled();
       }
       // needs to be placed after SymbolManager#addClickListener,
       // is fixed with 0.6.0 of annotations plugin
